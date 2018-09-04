@@ -10,7 +10,11 @@ module.exports = {
   },
   // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
   // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-  extends: ['plugin:vue/essential', 'plugin:prettier/recommended', 'airbnb-base'],
+  extends: [
+    'plugin:vue/essential',
+    'plugin:prettier/recommended',
+    'airbnb-base',
+  ],
   // required to lint *.vue files
   plugins: ['vue'],
   // check if imports actually resolve
@@ -52,6 +56,8 @@ module.exports = {
         optionalDependencies: ['test/unit/index.js'],
       },
     ],
+    //allow no parens in arrow functions with body
+    'arrow-parens': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-unused-expressions': 'off',
