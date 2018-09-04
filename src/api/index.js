@@ -1,13 +1,18 @@
+import axios from 'axios';
+
 const baseUrl = 'https://jsonplaceholder.typicode.com';
 
-async function fetchUser(id = 1) {
-  const response = await fetch(`${baseUrl}/users?id=${id}`);
-  const responseToJson = await response.json();
-  return responseToJson[0];
+const waait = (millis = 1000) =>
+  new Promise(resolve => setTimeout(resolve, millis));
+
+async function fetchUser(id) {
+  await waait();
+  return axios.get(`${baseUrl}/users/${id}00`);
 }
 
 async function fetchPosts() {
-  return fetch(`${baseUrl}/posts`).then(resp => resp.json());
+  await waait();
+  return axios.get(`${baseUrl}/posts`);
 }
 
 export default {
