@@ -7,7 +7,7 @@ const waait = (millis = 1000) =>
 
 async function fetchUser(id) {
   await waait();
-  return axios.get(`${baseUrl}/users/${id}00`);
+  return axios.get(`${baseUrl}/users/${id}`);
 }
 
 async function fetchPosts() {
