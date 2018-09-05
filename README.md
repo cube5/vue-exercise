@@ -13,7 +13,7 @@ Create a Vuex module and component(s) to display blog post data from the followi
 
 Feel free to reach out to <jjustice@bignerdranch.com> with questions!
 
-## Approach taken
+## Summary
 
 The project is publicly available at https://vigorous-easley-50e857.netlify.com
 
