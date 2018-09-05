@@ -7,7 +7,7 @@
 
 <script>
 import AppHeader from './components/AppHeader';
-import AppPosts from './views/AppPosts';
+import AppPosts from './pages/AppPosts';
 
 export default {
   name: 'App',

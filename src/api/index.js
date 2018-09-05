@@ -2,16 +2,17 @@ import axios from 'axios';
 
 const baseUrl = 'https://jsonplaceholder.typicode.com';
 
-const waait = (millis = 1000) =>
-  new Promise(resolve => setTimeout(resolve, millis));
+// Added to test loading state.
+// const waait = (millis = 1000) =>
+//   new Promise(resolve => setTimeout(resolve, millis));
 
 async function fetchUser(id) {
-  await waait();
+  // await waait();
   return axios.get(`${baseUrl}/users/${id}`);
 }
 
 async function fetchPosts() {
-  await waait();
+  // await waait();
   return axios.get(`${baseUrl}/posts`);
 }
 

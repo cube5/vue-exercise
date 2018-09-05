@@ -24,10 +24,10 @@ export default {
 .header {
   display: flex;
   flex: 1;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   background-color: hotpink;
-  padding: 20px;
+  padding: 15px 20px;
 }
 
 .header .title {

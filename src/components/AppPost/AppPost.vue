@@ -1,14 +1,14 @@
 <template>
-  <div class="post" :key="post.id">
-    <div class="post-title">{{ post.title }}</div>
-    <div class="post-body">{{post.userId}} {{ post.body }}</div>
+  <div class="post">
+    <h2 class="post-title">{{ post.title }}</h2>
+    <div class="post-body">{{ post.body }}</div>
     <div class="horizontal-divider"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AppPost',
+  name: 'app-post',
   props: ['post'],
 };
 </script>
@@ -29,7 +29,7 @@ export default {
 
 .post .post-title {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 .post .post-body {

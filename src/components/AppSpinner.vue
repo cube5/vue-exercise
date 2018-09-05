@@ -1,11 +1,23 @@
 <template>
-  <div class="loading" :class="{ sm: size === 'sm', md: size === 'md', lg: size === 'lg' }"></div>
+  <div
+    class="loading"
+    :class="{ sm: size === 'sm', md: size === 'md', lg: size === 'lg' }"
+  ></div>
 </template>
 
 <script>
 export default {
   name: 'app-spinner',
-  props: ['size'],
+  props: {
+    size: {
+      type: String,
+      default: 'sm',
+      validator(value) {
+        // The value must match one of these strings
+        return ['sm', 'md', 'lg'].indexOf(value) !== -1;
+      },
+    },
+  },
 };
 </script>
 

@@ -3,18 +3,11 @@
     <div class="column-left">
       <div class="column-title">Your posts</div>
 
-      <div v-if="loading">
-        <app-spinner size="lg"></app-spinner>
-      </div>
-
-      <div v-if="error">
-        <pre>Error occured. Please try again.</pre>
-      </div>
-
-      <template v-for="post in userPosts">
-        <app-post :key="post.id" v-bind:post="post"></app-post>
-      </template>
-      <div v-if="userPosts.length === 0">No posts to show...</div>
+      <app-post-list
+        v-bind:posts="userPosts"
+        v-bind:loading="loading"
+        v-bind:error="error"
+      ></app-post-list>
     </div>
 
     <div class="vertical-divider"></div>
@@ -22,30 +15,22 @@
     <div class="column-right">
       <div class="column-title">Other people's posts</div>
 
-      <div v-if="loading">
-        <app-spinner size="lg"></app-spinner>
-      </div>
-
-      <div v-if="error">
-        <pre>Error occured. Please try again.</pre>
-      </div>
-
-      <template v-for="post in posts">
-        <app-post :key="post.id" v-bind:post="post"></app-post>
-      </template>
-      <div v-if="posts.length === 0">No posts to show...</div>
+      <app-post-list
+        v-bind:posts="posts"
+        v-bind:loading="loading"
+        v-bind:error="error"
+      ></app-post-list>
     </div>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapState } from 'vuex';
-import AppPost from '../components/AppPost';
-import AppSpinner from '../components/AppSpinner';
+import AppPostList from '../../components/AppPostList';
 
 export default {
   name: 'app-posts',
-  components: { AppPost, AppSpinner },
+  components: { AppPostList },
   computed: {
     ...mapState({
       loading: state => state.blog.loading,
