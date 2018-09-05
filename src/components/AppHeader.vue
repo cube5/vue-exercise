@@ -1,7 +1,12 @@
 <template>
   <header class="header">
     <div class="title">Blog App <span class="version">v{{ version }}</span></div>
-    <app-user-avatar></app-user-avatar>
+    <div class="right">
+      <app-user-avatar></app-user-avatar>
+      <div class="github">
+        <a href="https://github.com/cube5/vue-exercise">Github</a>
+      </div>
+    </div>
   </header>
 </template>
 
@@ -36,5 +41,15 @@ export default {
 
 .header .version {
   font-size: 14px;
+}
+
+.header .right {
+  display: flex;
+}
+
+.header .github {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
 }
 </style>
