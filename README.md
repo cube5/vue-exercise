@@ -28,6 +28,8 @@ The approach to complete the excercise can be described by the steps below:
 
 I did not took a TDD approach because I wanted to first learn about the Vue's best practices and common guidelines. I come from a ReactJS background so it was important for me to learn those first and then the testing styles and conventions such as using `@vue/test-utils` and how to test Vuex modules as well as components connected to them.
 
+Also I did not the 100% test coverage because there where things I considered very small to test them (if you see the coverage's index.html file you'll see what I mean), even though numbers are green :ok_hand:.
+
 Vue is an awesome technology and a lot of fun to work with. I enjoyed this very much and would like to build more stuff using it.
 
 ## TO-DO
