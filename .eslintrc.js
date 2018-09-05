@@ -58,6 +58,8 @@ module.exports = {
     ],
     //allow no parens in arrow functions with body
     'arrow-parens': 0,
+    // eslint was inserting a trailing comma even in function arguments
+    'comma-dangle': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-unused-expressions': 'off',
